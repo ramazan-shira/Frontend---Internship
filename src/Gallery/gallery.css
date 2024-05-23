@@ -1,0 +1,10 @@
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.active {
+  font-size: 36px;
+}
