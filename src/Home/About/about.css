@@ -13,3 +13,40 @@
   color: #6c757d;
   font-family: "PT Serif", serif;
 }
+
+@media screen and (max-width: 1200px) {
+  .about-container {
+    padding: 50px 70px;
+  }
+  .about-img img {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .about-container {
+    flex-direction: column-reverse;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-content {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-container {
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-container {
+    padding: 50px 30px;
+  }
+}

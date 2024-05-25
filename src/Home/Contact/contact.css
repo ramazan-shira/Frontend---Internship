@@ -7,7 +7,8 @@
   width: 100%;
   box-sizing: border-box;
   padding: 50px 100px;
-  background-color: #bde0fe;
+  background-color: #caf0f8;
+  font-family: "Libre Baskerville", serif;
 }
 
 .contact-info {
@@ -71,10 +72,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 }
 
 .social-media-icon:hover {
   cursor: pointer;
+  transform: translateY(5px);
 }
 
 .social-media-icon a {
@@ -123,6 +126,10 @@
   color: #2b2d42;
 }
 
+.contact-form textarea {
+  height: 80px;
+}
+
 .contact-form input:focus,
 textarea:focus {
   border-bottom: 2px solid #00b4d8;
@@ -144,9 +151,65 @@ textarea:focus {
 }
 
 .contact-form button:hover {
-  background-color: #00b4d8;
+  background-color: #48cae4;
   color: white;
   cursor: pointer;
   border: 1px solid white;
   transform: translateY(-3px);
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-container {
+    padding: 50px 70px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .contact-info {
+    margin-left: 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-info h1 {
+    font-size: 22px;
+  }
+
+  .location,
+  .email,
+  .phone {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    padding: 50px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact-container {
+    padding: 50px 30px;
+  }
 }

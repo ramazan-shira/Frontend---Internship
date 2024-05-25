@@ -11,11 +11,18 @@
   background-color: white;
 }
 
+.navbar-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-tabs {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 24px;
+  gap: 32px;
   font-size: 24px;
   font-weight: 500;
   margin-right: 50px;
@@ -26,6 +33,7 @@
   margin: 0;
   text-decoration: none;
   color: black;
+  transition: all 0.4s ease-in-out;
 }
 
 .nav-tabs:hover {
@@ -44,24 +52,71 @@ a.active-tab {
   display: none;
 }
 
-@media screen and (max-width: 834px) {
+.nav-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+}
+
+.fa-xmark,
+.fa-bars {
+  font-size: 28px;
+}
+
+@media screen and (max-width: 1200px) {
   .navbar {
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 300px;
-    padding: 15px 30px;
-    gap: 40px;
+    padding: 15px 70px;
   }
+}
 
-  .nav-tabs {
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
+@media screen and (max-width: 768px) {
   .menu-icon {
     display: block;
-    align-self: flex-end;
+  }
+
+  .navbar.open {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 300px;
+    height: 100vh;
+    padding: 15px 30px;
+    padding-bottom: 50px;
+    gap: 70px;
+    background-color: #cbeef3;
+  }
+
+  .navbar-btn {
+    display: none;
+  }
+
+  .navbar-btn.open {
+    display: flex;
+    height: 100%;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .nav-tabs.open {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 15px 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    padding: 15px 30px;
   }
 }
