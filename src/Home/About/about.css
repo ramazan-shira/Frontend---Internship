@@ -1,0 +1,15 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  box-sizing: border-box;
+  padding: 50px 100px;
+}
+
+.about-content {
+  font-size: 22px;
+  font-weight: 400;
+  color: #6c757d;
+  font-family: "PT Serif", serif;
+}

@@ -5,11 +5,18 @@ import { dogs } from "./dogs";
 import { cats } from "./cats";
 import { birds } from "./birds";
 import GalleryTab from "./GalleryTab";
+import Cards from "./Cards";
+import Filters from "./Filters";
+import "./gallery.css";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].id);
 
   const [animals, setAnimals] = useState(dogs);
+
+  const [search, setSearch] = useState("");
+
+  const [filteredAnimals, setFilteredAnimals] = useState(animals);
 
   //   useEffect(() => {
   //     const fetchData = async () => {
@@ -22,6 +29,10 @@ const Gallery = () => {
   //   }, [selectedCategory]);
 
   useEffect(() => {
+    setFilteredAnimals(animals);
+  }, [animals]);
+
+  useEffect(() => {
     if (selectedCategory === "dogs") {
       setAnimals(dogs);
     } else if (selectedCategory === "cats") {
@@ -31,17 +42,31 @@ const Gallery = () => {
     }
   }, [selectedCategory]);
 
+  useEffect(() => {
+    if (search === "") {
+      setAnimals(dogs);
+    } else {
+      setFilteredAnimals(
+        filteredAnimals.filter((animal) =>
+          animal.name.toLowerCase().includes(search.toLowerCase())
+        )
+      );
+      setAnimals(filteredAnimals);
+    }
+  }, [search]);
   return (
-    <div>
+    <div className="gallery-container">
       <GalleryTab
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-      <ul>
+      <Filters search={search} setSearch={setSearch} />
+      {/* <ul>
         {animals.map((animal) => (
           <li>{animal.name}</li>
         ))}
-      </ul>
+      </ul> */}
+      <Cards animals={animals} />
     </div>
   );
 };

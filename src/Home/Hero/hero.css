@@ -1,0 +1,34 @@
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 50px 100px;
+}
+
+.animals {
+  position: relative;
+  text-align: center;
+  width: 30%;
+}
+
+.animals:hover {
+  cursor: pointer;
+}
+
+.animals img {
+  width: 100%;
+  height: 500px;
+}
+
+.animal-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  font-weight: 500;
+  font-family: "Anton", sans-serif;
+}

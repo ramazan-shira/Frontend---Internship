@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: aliceblue;
+}
+
+.footer p {
+  width: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Crete Round", serif;
+  text-align: center;
+}
