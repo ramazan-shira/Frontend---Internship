@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { categories } from "./constants";
+import { categories } from "../constants";
 import axios from "axios";
 import { dogs } from "./dogs";
 import { cats } from "./cats";
@@ -44,16 +44,15 @@ const Gallery = () => {
 
   useEffect(() => {
     if (search === "") {
-      setAnimals(dogs);
+      setFilteredAnimals(dogs);
     } else {
       setFilteredAnimals(
-        filteredAnimals.filter((animal) =>
+        animals.filter((animal) =>
           animal.name.toLowerCase().includes(search.toLowerCase())
         )
       );
-      setAnimals(filteredAnimals);
     }
-  }, [search]);
+  }, [search, animals]);
   return (
     <div className="gallery-container">
       <GalleryTab
@@ -66,7 +65,7 @@ const Gallery = () => {
           <li>{animal.name}</li>
         ))}
       </ul> */}
-      <Cards animals={animals} />
+      <Cards animals={filteredAnimals} />
     </div>
   );
 };

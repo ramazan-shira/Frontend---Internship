@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Tab from "./Tab";
 import "./navbar.css";
+import Logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
@@ -9,17 +10,25 @@ const Navbar = () => {
     setActive(!active);
   };
 
+  useEffect(() => {
+    if (active) {
+      window.onscroll = () => {
+        setActive(false);
+      };
+    }
+  }, [active]);
+
   return (
-    <div className={active ? "navbar open" : "navbar"}>
-      <div className={active ? "navbar-btn open" : "navbar-btn"}>
-        <div className="logo">Logo</div>
+    <div className="navbar">
+      <div className="logo">
+        <img src={Logo} alt="logo" />
+      </div>
+      <button className="nav-btn" onClick={handleNav}>
+        <i className={active ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
+      </button>
+      <nav className="nav-tabs">
         <Tab active={active} />
-      </div>
-      <div className="menu-icon">
-        <button className="nav-btn" onClick={handleNav}>
-          <i className={active ? "fa-solid fa-xmark" : "fa-solid fa-bars"}></i>
-        </button>
-      </div>
+      </nav>
     </div>
   );
 };

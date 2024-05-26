@@ -7,11 +7,11 @@ const Card = (props) => {
       <img src={image} alt="animal" width={150} height={150} />
       <p className="info">
         <span className="info-title">Name:</span>
-        {name}
+        <span className="info-value">{name}</span>
       </p>
       <p className="info">
         <span className="info-title">Origin:</span>
-        {origin}
+        <span className="info-value">{origin}</span>
       </p>
     </div>
   );

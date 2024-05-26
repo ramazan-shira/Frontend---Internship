@@ -3,7 +3,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const Contact = () => {
   return (
-    <div className="contact-container" id="contact">
+    <div className="contact-container section" id="contact">
       <div className="contact-info">
         <h1>Contact Us</h1>
         <div className="location">

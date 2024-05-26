@@ -1,6 +1,6 @@
 .hero-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -10,29 +10,32 @@
 .animals {
   position: relative;
   text-align: center;
-  width: 30%;
-  transition: all 0.4s ease-in-out;
-}
-
-.animals:hover {
-  cursor: pointer;
-  transform: scale(1.1) translateX(-3px);
+  width: 100%;
+  overflow: hidden;
 }
 
 .animals img {
   width: 100%;
   height: 500px;
+  display: block;
+  transition: transform 0.4s;
+}
+
+.animals img:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transform-origin: 50% 50%;
 }
 
 .animal-title {
   position: absolute;
-  top: 40%;
+  cursor: pointer;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 60px;
   color: white;
   font-weight: 600;
-  font-family: "Lora", serif;
 }
 
 @media screen and (max-width: 1200px) {
@@ -59,8 +62,9 @@
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 660px) {
   .hero-container {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -71,7 +75,7 @@
   }
 
   .animals img {
-    width: 300px;
+    width: 100%;
     height: auto;
   }
 }
