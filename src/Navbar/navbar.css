@@ -123,10 +123,18 @@ a:hover {
   .navbar {
     padding: 15px 50px;
   }
+
+  .nav-btn {
+    right: 50px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .navbar {
     padding: 15px 30px;
+  }
+
+  .nav-btn {
+    right: 30px;
   }
 }
