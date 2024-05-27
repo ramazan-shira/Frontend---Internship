@@ -83,6 +83,7 @@ a:hover {
     padding: 0;
     justify-content: center;
     align-items: center;
+    transition: all 0.3s;
   }
 
   .tabs.open {
@@ -91,10 +92,11 @@ a:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition: all 0.4s ease;
+    transition: all 0.4s ease-in-out;
     background-color: #e2eafc;
     padding: 30px;
     box-sizing: border-box;
+    transition: all 0.3s;
   }
 
   .tabs {
@@ -106,6 +108,11 @@ a:hover {
     color: #6ca5e2;
     font-size: 28px;
     font-weight: 600;
+  }
+
+  .tabs.open a:hover {
+    color: #eb1d19;
+    transform: translateY(-10px);
   }
 
   a.active-tab {

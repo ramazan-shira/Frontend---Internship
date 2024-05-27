@@ -12,12 +12,11 @@ const About = () => {
       <div className="about-content">
         <h1>About Us</h1>
         <p>
-          About Us Welcome to Animal Haven, your go-to online resource for
-          everything related to dogs, cats, and birds. Our catalog offers
-          detailed profiles and expert advice to help you find and care for the
-          perfect pet. We are dedicated to promoting responsible pet ownership
-          and connecting you with adoption resources and a community of animal
-          lovers.
+          Welcome to Animal Haven, your go-to online resource for everything
+          related to dogs, cats, and birds. Our catalog offers detailed profiles
+          and expert advice to help you find and care for the perfect pet. We
+          are dedicated to promoting responsible pet ownership and connecting
+          you with adoption resources and a community of animal lovers.
         </p>
       </div>
     </div>

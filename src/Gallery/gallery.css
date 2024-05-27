@@ -62,8 +62,9 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 20px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .animal-card {
@@ -109,8 +110,116 @@
   margin: 0;
 }
 
-.animal-card .info-value {
-  overflow-x: hidden;
-  text-overflow: ellipsis;
+.info .info-value {
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+}
+
+@media screen and (max-width: 1300px) {
+  .animal-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .gallery-container {
+    padding: 50px 70px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .info .info-value {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .animal-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .info .info-value {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .info .info-value {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 985px) {
+  .animal-cards {
+    gap: 20px;
+  }
+
+  .info .info-value {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .animal-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .animal-card {
+    width: 80%;
+  }
+
+  .info .info-value {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .animal-card {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .info .info-value {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery-container {
+    padding: 50px 50px;
+  }
+
+  .info .info-value {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info .info-value {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .info .info-value {
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gallery-container {
+    padding: 50px 30px;
+  }
+
+  .info .info-value {
+    width: 180px;
+  }
 }

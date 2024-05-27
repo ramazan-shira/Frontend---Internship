@@ -60,11 +60,6 @@ const Gallery = () => {
         setSelectedCategory={setSelectedCategory}
       />
       <Filters search={search} setSearch={setSearch} />
-      {/* <ul>
-        {animals.map((animal) => (
-          <li>{animal.name}</li>
-        ))}
-      </ul> */}
       <Cards animals={filteredAnimals} />
     </div>
   );
