@@ -8,7 +8,6 @@ import GalleryTab from "./GalleryTab";
 import Cards from "./Cards";
 import Filters from "./Filters";
 import "./gallery.css";
-import Modals from "./Modal";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].id);
@@ -16,6 +15,7 @@ const Gallery = () => {
   const [animals, setAnimals] = useState(dogs);
 
   const [search, setSearch] = useState("");
+  const [selectedFilter, setSelectedFilter] = useState();
 
   const [filteredAnimals, setFilteredAnimals] = useState(animals);
 
@@ -54,14 +54,34 @@ const Gallery = () => {
       );
     }
   }, [search, animals]);
+
+  useEffect(() => {
+    if (search === "" && selectedFilter === "select") {
+      setFilteredAnimals(dogs);
+    } else {
+      setFilteredAnimals(
+        animals.filter(
+          (animal) =>
+            animal.name.toLowerCase().includes(search.toLowerCase()) &&
+            selectedFilter === animal.size
+        )
+      );
+    }
+  }, [search, selectedFilter, animals]);
   return (
     <div className="gallery-container">
       <GalleryTab
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
       />
-      <Filters search={search} setSearch={setSearch} />
-      <Cards animals={filteredAnimals} />
+      <Filters
+        animals={animals}
+        search={search}
+        setSearch={setSearch}
+        selectedFilter={selectedFilter}
+        setSelectedFilter={setSelectedFilter}
+      />
+      <Cards animals={animals} />
     </div>
   );
 };

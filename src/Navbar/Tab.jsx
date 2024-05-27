@@ -41,6 +41,7 @@ const Tab = (props) => {
     <div className={active ? "tabs open" : "tabs"}>
       {tabs.map((tab) => (
         <a
+          key={tab.id}
           href={`#${tab.id}`}
           onClick={() => handleTab(tab.id)}
           className={tab.id === selectedTab ? "active-tab" : ""}
