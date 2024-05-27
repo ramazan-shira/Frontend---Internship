@@ -30,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 100px;
+  padding: 30px;
 }
 
 .search-input {
@@ -43,7 +43,7 @@
   background-position: 15px 10px;
   background-size: 20px 20px;
   border-radius: 100px;
-  width: 300px;
+  width: 400px;
   padding: 0.5em 1em 0.5em 2.5em;
 }
 
@@ -151,15 +151,27 @@
   .info .info-value {
     width: 200px;
   }
+  .animal-cards {
+    gap: 30px;
+  }
 }
 
-@media screen and (max-width: 985px) {
+@media screen and (max-width: 840px) {
+  .info .info-value {
+    width: 180px;
+  }
   .animal-cards {
     gap: 20px;
   }
+}
 
+@media screen and (max-width: 780px) {
   .info .info-value {
     width: 150px;
+  }
+
+  .search-input {
+    width: 350px;
   }
 }
 
@@ -178,6 +190,10 @@
 
   .info .info-value {
     width: 250px;
+  }
+
+  .search-input {
+    width: 300px;
   }
 }
 

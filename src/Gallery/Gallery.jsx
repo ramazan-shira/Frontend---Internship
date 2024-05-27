@@ -8,6 +8,7 @@ import GalleryTab from "./GalleryTab";
 import Cards from "./Cards";
 import Filters from "./Filters";
 import "./gallery.css";
+import Modals from "./Modal";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].id);
