@@ -44,8 +44,10 @@ const Gallery = () => {
   }, [selectedCategory]);
 
   useEffect(() => {
-    if(search === "")
-  }, []);
+    if (search === "") {
+      setFilteredAnimals(dogs);
+    }
+  }, [search, animals]);
 
   return (
     <div className="gallery-container">
