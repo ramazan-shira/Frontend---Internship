@@ -3,9 +3,9 @@ import Card from "./Card";
 import "./gallery.css";
 
 const Cards = (props) => {
-  const { animals } = props;
+  const { animals, selectedCategory } = props;
 
-  const [selectedAnimal, setSelectedAnimal] = useState();
+  const [modalProp, setModalProp] = useState();
 
   return (
     <div className="animal-cards">
@@ -14,8 +14,9 @@ const Cards = (props) => {
           key={animal.id}
           animals={animals}
           animal={animal}
-          selectedAnimal={selectedAnimal}
-          setSelectedAnimal={setSelectedAnimal}
+          modalProp={modalProp}
+          setModalProp={setModalProp}
+          selectedCategory={selectedCategory}
         />
       ))}
     </div>

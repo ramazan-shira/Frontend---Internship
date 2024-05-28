@@ -1,11 +1,7 @@
 import { useState } from "react";
-import { birds } from "./birds";
-import { cats } from "./cats";
-import { dogs } from "./dogs";
 import "./gallery.css";
 const Filters = (props) => {
-  const { setSearch, search, animals, selectedFilter, setSelectedFilter } =
-    props;
+  const { setSearch, search, selectedCategory, setSelectedFilter } = props;
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -18,14 +14,14 @@ const Filters = (props) => {
   const filterDogs = (
     <select onChange={handleSelectFilter}>
       <option value="select">Select size</option>
-      <option value="tiny">Tiny</option>
-      <option value="smal">Small</option>
-      <option value="sm">Small to Medium</option>
-      <option value="standard">Toy, Miniature, Standard</option>
-      <option value="medium">Medium</option>
-      <option value="ml">Medium to Large</option>
-      <option value="large">Large</option>
-      <option value="giant">Giant</option>
+      <option value="Tiny">Tiny</option>
+      <option value="Small">Small</option>
+      <option value="Small to Medium">Small to Medium</option>
+      <option value="Toy, Miniature, Standard">Toy, Miniature, Standard</option>
+      <option value="Medium">Medium</option>
+      <option value="Medium to Large">Medium to Large</option>
+      <option value="Large">Large</option>
+      <option value="Giant">Giant</option>
     </select>
   );
 
@@ -53,8 +49,8 @@ const Filters = (props) => {
         />
       </div>
       <div className="filter">
-        {animals === dogs && filterDogs}
-        {animals === birds && filterBirds}
+        {selectedCategory === "dogs" && filterDogs}
+        {selectedCategory === "birds" && filterBirds}
       </div>
     </div>
   );

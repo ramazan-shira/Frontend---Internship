@@ -3,15 +3,15 @@ import "./gallery.css";
 import Modal from "./Modal";
 
 const Card = (props) => {
-  const { animals, animal, selectedAnimal, setSelectedAnimal } = props;
+  const { animals, animal, selectedCategory, setModalProp } = props;
 
-  const [clicked, setClicked] = useState(false);
+  const [toggleModal, setToggleModal] = useState(false);
 
   const openModal = (id) => {
     animals.map((animal) => {
       if (animal.id === id) {
-        setSelectedAnimal(animal);
-        setClicked(!clicked);
+        setModalProp(animal);
+        setToggleModal(!toggleModal);
       }
       return animal;
     });
@@ -27,10 +27,21 @@ const Card = (props) => {
         </p>
         <p className="info">
           <span className="info-title">Origin:</span>
-          <span className="info-value">{animal.origin}</span>
+          <span className="info-value">
+            {selectedCategory === "birds"
+              ? animal.place_of_found
+              : animal.origin}
+          </span>
         </p>
-        <Modal animals={animals} animal={animal} clicked={clicked} />
       </div>
+      {toggleModal && (
+        <Modal
+          animal={animal}
+          toggleModal={toggleModal}
+          setToggleModal={setToggleModal}
+          selectedCategory={selectedCategory}
+        />
+      )}
     </>
   );
 };

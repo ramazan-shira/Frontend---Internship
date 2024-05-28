@@ -1,15 +1,17 @@
-import { birds } from "./birds";
-import { cats } from "./cats";
-import { dogs } from "./dogs";
 import "./gallery.css";
 const Modal = (props) => {
-  const { animals, clicked, animal } = props;
+  const { toggleModal, setToggleModal, animal, selectedCategory } = props;
 
+  const closeModal = () => {
+    setToggleModal(false);
+  };
   return (
-    <div className={clicked ? "modal-window show" : "modal-window"}>
+    <div className="modal-window show">
       <div className="modal-content">
-        <span className="close">&times;</span>
-        {animals === dogs && (
+        <span className="close" onClick={closeModal}>
+          &times;
+        </span>
+        {selectedCategory === "dogs" && (
           <div className="animal-info">
             <div className="info">
               <h1>{animal.name}</h1>
@@ -52,7 +54,7 @@ const Modal = (props) => {
             />
           </div>
         )}
-        {animals === cats && (
+        {selectedCategory === "cats" && (
           <div className="animal-info">
             <div className="info">
               <h1>{animal.name}</h1>
@@ -85,7 +87,7 @@ const Modal = (props) => {
             />
           </div>
         )}
-        {animals === birds && (
+        {selectedCategory === "birds" && (
           <div className="animal-info">
             <div className="info">
               <h1>{animal.name}</h1>
