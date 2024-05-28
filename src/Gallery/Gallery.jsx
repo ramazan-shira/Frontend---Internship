@@ -44,30 +44,9 @@ const Gallery = () => {
   }, [selectedCategory]);
 
   useEffect(() => {
-    if (search === "") {
-      setFilteredAnimals(dogs);
-    } else {
-      setFilteredAnimals(
-        animals.filter((animal) =>
-          animal.name.toLowerCase().includes(search.toLowerCase())
-        )
-      );
-    }
-  }, [search, animals]);
+    if(search === "")
+  }, []);
 
-  useEffect(() => {
-    if (search === "" && selectedFilter === "select") {
-      setFilteredAnimals(dogs);
-    } else {
-      setFilteredAnimals(
-        animals.filter(
-          (animal) =>
-            animal.name.toLowerCase().includes(search.toLowerCase()) &&
-            selectedFilter === animal.size
-        )
-      );
-    }
-  }, [search, selectedFilter, animals]);
   return (
     <div className="gallery-container">
       <GalleryTab

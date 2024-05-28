@@ -15,6 +15,32 @@ const Filters = (props) => {
     setSelectedFilter(e.target.value);
   };
 
+  const filterDogs = (
+    <select onChange={handleSelectFilter}>
+      <option value="select">Select size</option>
+      <option value="tiny">Tiny</option>
+      <option value="smal">Small</option>
+      <option value="sm">Small to Medium</option>
+      <option value="standard">Toy, Miniature, Standard</option>
+      <option value="medium">Medium</option>
+      <option value="ml">Medium to Large</option>
+      <option value="large">Large</option>
+      <option value="giant">Giant</option>
+    </select>
+  );
+
+  const filterBirds = (
+    <select onChange={handleSelectFilter}>
+      <option value="select">Select weight</option>
+      <option value="0-2">0 - 2 kg</option>
+      <option value="2-4">2 - 4 kg</option>
+      <option value="4-6">4 - 6 kg</option>
+      <option value="6-8">6 - 8 kg</option>
+      <option value="8-10">8 - 10 kg</option>
+      <option value=">10">&gt;10 kg</option>
+    </select>
+  );
+
   return (
     <div className="filters">
       <div className="search">
@@ -27,30 +53,8 @@ const Filters = (props) => {
         />
       </div>
       <div className="filter">
-        {animals === dogs && (
-          <select onChange={handleSelectFilter}>
-            <option value="select">Select size</option>
-            <option value="tiny">Tiny</option>
-            <option value="smal">Small</option>
-            <option value="sm">Small to Medium</option>
-            <option value="standard">Toy, Miniature, Standard</option>
-            <option value="medium">Medium</option>
-            <option value="ml">Medium to Large</option>
-            <option value="large">Large</option>
-            <option value="giant">Giant</option>
-          </select>
-        )}
-        {animals === birds && (
-          <select onChange={handleSelectFilter}>
-            <option value="select">Select weight</option>
-            <option value="0-2">0 - 2 kg</option>
-            <option value="2-4">2 - 4 kg</option>
-            <option value="4-6">4 - 6 kg</option>
-            <option value="6-8">6 - 8 kg</option>
-            <option value="8-10">8 - 10 kg</option>
-            <option value=">10">&gt;10 kg</option>
-          </select>
-        )}
+        {animals === dogs && filterDogs}
+        {animals === birds && filterBirds}
       </div>
     </div>
   );

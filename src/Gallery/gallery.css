@@ -217,6 +217,12 @@
   transform: none;
 }
 
+@media screen and (max-width: 1440px) {
+  .info .info-value {
+    width: 150px;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .animal-cards {
     grid-template-columns: 1fr 1fr 1fr;
