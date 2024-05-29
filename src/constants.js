@@ -1,10 +1,11 @@
 export const categories = [
   {
-    id: "dogs",
-    title: "Dogs",
+    id: "birds",
+    title: "Birds",
     image:
-      "https://ghk.h-cdn.co/assets/17/30/2048x3072/bernese-mountain-dog.jpg",
+      "https://i.pinimg.com/236x/bf/cd/50/bfcd50ff1e74a8c67afc3ec61f128002.jpg",
   },
+
   {
     id: "cats",
     title: "Cats",
@@ -12,9 +13,9 @@ export const categories = [
       "https://i.pinimg.com/736x/95/63/15/956315eedf40a60820c4b453f6680166.jpg",
   },
   {
-    id: "birds",
-    title: "Birds",
+    id: "dogs",
+    title: "Dogs",
     image:
-      "https://i.pinimg.com/236x/bf/cd/50/bfcd50ff1e74a8c67afc3ec61f128002.jpg",
+      "https://ghk.h-cdn.co/assets/17/30/2048x3072/bernese-mountain-dog.jpg",
   },
 ];

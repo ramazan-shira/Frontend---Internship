@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
-import { categories } from "../constants";
 import axios from "axios";
 import GalleryTab from "./GalleryTab";
 import Cards from "./Cards";
 import Filters from "./Filters";
 import "./gallery.css";
+import { useSearchParams } from "react-router-dom";
 
 const Gallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0].id);
+  const [searchParams] = useSearchParams();
+
+  const [selectedCategory, setSelectedCategory] = useState(
+    searchParams.get("category")
+  );
 
   const [animals, setAnimals] = useState();
 
@@ -17,11 +21,21 @@ const Gallery = () => {
 
   const [filteredAnimals, setFilteredAnimals] = useState(animals);
 
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setSearch("");
     setSelectedFilter("select");
+    const fetchData = async () => {
+      setIsLoading(true);
+      const response = await axios.get(
+        `https://freetestapi.com/api/v1/${selectedCategory}?search=${search}`
+      );
+      setIsLoading(false);
+      setAnimals(response.data);
+      setFilteredAnimals(response.data);
+    };
+    fetchData();
   }, [selectedCategory]);
 
   const updateFilteredAnimals = () => {
@@ -66,7 +80,7 @@ const Gallery = () => {
       }
     };
     fetchData();
-  }, [search, selectedCategory]);
+  }, [search]);
 
   useEffect(() => {
     if (animals) {
@@ -87,7 +101,7 @@ const Gallery = () => {
       />
       {isLoading ? (
         <h1>Loading</h1>
-      ) : !filteredAnimals ? (
+      ) : !filteredAnimals.length ? (
         <h1>No data found!!</h1>
       ) : (
         <Cards animals={filteredAnimals} selectedCategory={selectedCategory} />

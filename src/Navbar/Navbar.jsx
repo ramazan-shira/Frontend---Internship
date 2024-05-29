@@ -2,9 +2,16 @@ import { useEffect, useState } from "react";
 import Tab from "./Tab";
 import "./navbar.css";
 import Logo from "../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
 
   const handleNav = () => {
     setActive(!active);
@@ -20,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="logo">
+      <div className="logo" onClick={handleClick}>
         <img src={Logo} alt="logo" />
       </div>
       <button className="nav-btn" onClick={handleNav}>

@@ -1,8 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { categories } from "../constants";
 import "./gallery.css";
 
 const GalleryTab = (props) => {
   const { selectedCategory, setSelectedCategory } = props;
+
+  const navigate = useNavigate();
 
   const selectedIndex = categories.findIndex(
     (category) => category.id === selectedCategory
@@ -17,6 +20,7 @@ const GalleryTab = (props) => {
   const handleCategory = (id) => {
     if (selectedCategory !== id) {
       setSelectedCategory(id);
+      navigate(`/gallery?category=${id}`);
     }
   };
   return (

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { navTabs } from "./navtabs";
 import "./navbar.css";
+import { Link, useLocation } from "react-router-dom";
 
 const Tab = (props) => {
   const { active } = props;
@@ -27,11 +28,13 @@ const Tab = (props) => {
 
       if (currentSection) {
         [
-          ...document.querySelectorAll(`a:not([href='#${currentSection.id}'])`),
+          ...document.querySelectorAll(
+            `a:not([href='/#${currentSection.id}'])`
+          ),
         ].forEach((a) => a.classList.remove("active-tab"));
 
         document
-          .querySelector(`a[href='#${currentSection.id}']`)
+          .querySelector(`a[href='/#${currentSection.id}']`)
           ?.classList.add("active-tab");
       }
     }
@@ -40,14 +43,14 @@ const Tab = (props) => {
   return (
     <div className={active ? "tabs open" : "tabs"}>
       {tabs.map((tab) => (
-        <a
+        <Link
           key={tab.id}
-          href={`#${tab.id}`}
+          to={`/#${tab.id}`}
           onClick={() => handleTab(tab.id)}
           className={tab.id === selectedTab ? "active-tab" : ""}
         >
           {tab.title}
-        </a>
+        </Link>
       ))}
     </div>
   );

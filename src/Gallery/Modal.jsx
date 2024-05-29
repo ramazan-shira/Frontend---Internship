@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./gallery.css";
 const Modal = (props) => {
   const { toggleModal, setToggleModal, animal, selectedCategory } = props;
@@ -5,6 +6,7 @@ const Modal = (props) => {
   const closeModal = () => {
     setToggleModal(false);
   };
+
   return (
     <div className="modal-window show">
       <div className="modal-content">

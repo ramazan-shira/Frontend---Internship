@@ -1,7 +1,7 @@
 export const navTabs = [
   {
-    id: "hero",
-    title: "Hero",
+    id: "home",
+    title: "Home",
   },
   {
     id: "about",

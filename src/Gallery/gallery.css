@@ -146,7 +146,7 @@
 .modal-window {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   padding-top: 150px;
   left: 0;
   top: 0;
@@ -167,6 +167,7 @@
   border: 1px solid #888;
   width: 70%;
   font-size: 20px;
+  overflow-y: auto !important;
 }
 
 .close {
@@ -187,7 +188,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 5px;
+  gap: 10px;
 }
 
 .animal-info .info {
@@ -195,12 +196,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 10px;
 }
 
 .animal-info h1 {
   width: 100%;
-  text-align: center;
-  color: red;
+  color: black;
 }
 
 .animal-info ul {
