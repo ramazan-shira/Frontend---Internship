@@ -154,14 +154,12 @@ body.modal-open {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  overflow: auto;
+  height: 88%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-window.show {
   display: block;
-  overflow-y: scroll;
 }
 
 .modal-content {
@@ -170,6 +168,7 @@ body.modal-open {
   padding: 30px;
   border: 1px solid #888;
   width: 70%;
+  height: 85%;
   font-size: 20px;
   overflow-y: auto !important;
 }
@@ -193,6 +192,7 @@ body.modal-open {
   justify-content: center;
   align-items: flex-start;
   gap: 10px;
+  overflow-y: auto;
 }
 
 .animal-info .info {
