@@ -188,6 +188,10 @@ textarea:focus {
     justify-content: center;
     align-items: center;
   }
+
+  .contact-form button {
+    margin-left: 30%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -199,6 +203,10 @@ textarea:focus {
   .email,
   .phone {
     font-size: 20px;
+  }
+
+  .contact-form button {
+    margin-left: 15%;
   }
 }
 

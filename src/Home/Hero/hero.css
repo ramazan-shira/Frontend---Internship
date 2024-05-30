@@ -4,7 +4,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 300px 100px;
+  padding: 100px 100px;
 }
 
 .animals {
@@ -40,7 +40,7 @@
 
 @media screen and (max-width: 1200px) {
   .hero-container {
-    padding: 50px 70px;
+    padding: 100px 70px 50px 70px;
   }
 }
 
@@ -82,12 +82,12 @@
 
 @media screen and (max-width: 480px) {
   .hero-container {
-    padding: 50px 50px;
+    padding: 100px 50px 50px 50px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .hero-container {
-    padding: 50px 30px;
+    padding: 100px 30px 50px 30px;
   }
 }

@@ -7,6 +7,28 @@ const Modal = (props) => {
     setToggleModal(false);
   };
 
+  // useEffect(() => {
+  //   if (toggleModal) {
+  //     setToggleModal(true);
+  //     document.body.classList.add("modal-open");
+  //   } else {
+  //     setToggleModal(false);
+  //     document.body.classList.remove("modal-open");
+  //   }
+  // }, [toggleModal]);
+
+  useEffect(() => {
+    if (toggleModal) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, [toggleModal]);
+
   return (
     <div className="modal-window show">
       <div className="modal-content">
