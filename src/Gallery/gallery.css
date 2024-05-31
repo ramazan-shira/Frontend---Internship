@@ -8,6 +8,7 @@ body.modal-open {
   align-items: center;
   box-sizing: border-box;
   padding: 50px 100px;
+  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
 }
 
 .gallery-tabs {
@@ -167,8 +168,7 @@ body.modal-open {
   margin: auto;
   padding: 30px;
   border: 1px solid #888;
-  width: 70%;
-  /* height: 85%; */
+  width: 60%;
   font-size: 20px;
   overflow-y: auto !important;
 }
@@ -244,6 +244,10 @@ body.modal-open {
   .info .info-value {
     width: 150px;
   }
+
+  .modal-content {
+    width: 70%;
+  }
 }
 
 @media screen and (max-width: 1070px) {
@@ -279,7 +283,7 @@ body.modal-open {
     flex-direction: column;
   }
   .modal-content {
-    height: 88%;
+    height: 80%;
   }
 }
 
