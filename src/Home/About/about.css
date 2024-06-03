@@ -18,15 +18,32 @@
   margin: 0;
   color: #6c757d;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 28px;
+}
+
+@media screen and (max-width: 1440px) {
+  .about-content p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .about-img img {
+    width: 500px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   .about-container {
     padding: 50px 70px;
   }
+
   .about-img img {
-    width: 400px;
+    width: 450px;
+  }
+
+  .about-content p {
+    font-size: 22px;
   }
 }
 
@@ -39,11 +56,19 @@
   .about-img img {
     width: 100%;
   }
+
+  .about-content p {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 600px) {
   .about-content {
     font-size: 20px;
+  }
+
+  .about-content p {
+    font-size: 22px;
   }
 }
 

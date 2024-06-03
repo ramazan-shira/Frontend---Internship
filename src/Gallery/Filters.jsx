@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./gallery.css";
 const Filters = (props) => {
   const { setSearch, search, selectedCategory, setSelectedFilter } = props;

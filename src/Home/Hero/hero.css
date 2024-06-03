@@ -33,7 +33,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 60px;
+  font-size: 66px;
   color: white;
   font-weight: 600;
 }
@@ -47,6 +47,10 @@
 @media screen and (max-width: 1150px) {
   .animals img {
     height: 400px;
+  }
+
+  .animal-title {
+    font-size: 60px;
   }
 }
 
@@ -77,6 +81,10 @@
   .animals img {
     width: 100%;
     height: auto;
+  }
+
+  .animal-title {
+    font-size: 66px;
   }
 }
 

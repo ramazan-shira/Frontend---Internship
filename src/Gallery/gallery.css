@@ -45,6 +45,7 @@ body.modal-open {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .filter select:focus {
@@ -158,9 +159,11 @@ body.modal-open {
   height: 100%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease-in-out;
 }
 .modal-window.show {
   display: block;
+  transition: all 0.4s ease-in-out;
 }
 
 .modal-content {

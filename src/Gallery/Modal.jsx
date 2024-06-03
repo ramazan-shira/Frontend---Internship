@@ -7,16 +7,6 @@ const Modal = (props) => {
     setToggleModal(false);
   };
 
-  // useEffect(() => {
-  //   if (toggleModal) {
-  //     setToggleModal(true);
-  //     document.body.classList.add("modal-open");
-  //   } else {
-  //     setToggleModal(false);
-  //     document.body.classList.remove("modal-open");
-  //   }
-  // }, [toggleModal]);
-
   useEffect(() => {
     if (toggleModal) {
       document.body.classList.add("modal-open");
