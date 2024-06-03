@@ -4,14 +4,12 @@ import GalleryTab from "./GalleryTab";
 import Cards from "./Cards";
 import Filters from "./Filters";
 import "./gallery.css";
-import { useSearchParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Gallery = () => {
-  const [searchParams] = useSearchParams();
+  const { category } = useParams();
 
-  const [selectedCategory, setSelectedCategory] = useState(
-    searchParams.get("category")
-  );
+  const [selectedCategory, setSelectedCategory] = useState(category);
 
   const [animals, setAnimals] = useState();
 

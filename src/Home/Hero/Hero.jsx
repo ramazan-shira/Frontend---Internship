@@ -5,7 +5,7 @@ const Hero = () => {
   const navigate = useNavigate();
 
   const handleClick = (category) => {
-    navigate(`/gallery?category=${category}`);
+    navigate(`/gallery/${category}`);
   };
   return (
     <div className="hero-container section" id="home">

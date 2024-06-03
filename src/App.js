@@ -22,7 +22,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/:category" element={<Gallery />} />
       </Routes>
       <Navbar />
     </>

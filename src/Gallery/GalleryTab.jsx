@@ -20,7 +20,7 @@ const GalleryTab = (props) => {
   const handleCategory = (id) => {
     if (selectedCategory !== id) {
       setSelectedCategory(id);
-      navigate(`/gallery?category=${id}`);
+      navigate(`/gallery/${id}`);
     }
   };
   return (
