@@ -98,9 +98,9 @@ const Gallery = () => {
         selectedCategory={selectedCategory}
       />
       {isLoading ? (
-        <h1>Loading</h1>
+        <span className="loader"></span>
       ) : !filteredAnimals.length ? (
-        <h1>No data found!!</h1>
+        <h1 style={{ color: "red" }}>No data found!!</h1>
       ) : (
         <Cards animals={filteredAnimals} selectedCategory={selectedCategory} />
       )}

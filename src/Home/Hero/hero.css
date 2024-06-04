@@ -1,6 +1,6 @@
 .hero-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -19,6 +19,9 @@
   height: 500px;
   display: block;
   transition: transform 0.4s;
+  width: -moz-max-content;
+  width: -webkit-max-content;
+  width: -o-max-content;
 }
 
 .animals img:hover {
