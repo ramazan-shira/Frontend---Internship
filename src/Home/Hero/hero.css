@@ -40,6 +40,11 @@
   color: white;
   font-weight: 600;
 }
+@media screen and (min-width: 1500px) {
+  .hero-container {
+    padding: 100px 300px;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .hero-container {

@@ -12,7 +12,7 @@ const Filters = (props) => {
 
   const filterDogs = (
     <select onChange={handleSelectFilter}>
-      <option value="select">Select size</option>
+      <option value="select">Filter by size</option>
       <option value="Tiny">Tiny</option>
       <option value="Small">Small</option>
       <option value="Small to Medium">Small to Medium</option>
@@ -26,7 +26,7 @@ const Filters = (props) => {
 
   const filterBirds = (
     <select onChange={handleSelectFilter}>
-      <option value="select">Select weight</option>
+      <option value="select">Filter by weight</option>
       <option value="0-2">0 - 2 kg</option>
       <option value="2-4">2 - 4 kg</option>
       <option value="4-6">4 - 6 kg</option>

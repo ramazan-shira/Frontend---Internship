@@ -21,6 +21,12 @@
   font-size: 28px;
 }
 
+@media screen and (min-width: 1500px) {
+  .about-container {
+    padding: 50px 300px;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .about-content p {
     font-size: 24px;

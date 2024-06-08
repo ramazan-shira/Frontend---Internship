@@ -158,6 +158,22 @@ textarea:focus {
   transform: translateY(-3px);
 }
 
+.error {
+  font-size: 14px;
+  color: red;
+}
+
+.success {
+  font-size: 24px;
+  color: #1dab45;
+}
+
+@media screen and (min-width: 1500px) {
+  .contact-container {
+    padding: 50px 300px;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .contact-container {
     padding: 50px 70px;
@@ -184,6 +200,11 @@ textarea:focus {
   .contact-container {
     grid-template-columns: 1fr 2fr;
   }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -196,6 +217,14 @@ textarea:focus {
 
   .contact-form button {
     margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+    font-size: 18px;
   }
 }
 
