@@ -1,5 +1,5 @@
-import dogs from "./assets/images/dog.jpg";
-import cats from "./assets/images/cat.jpg";
+import dogs from "./assets/images/dogs.jpg";
+import cats from "./assets/images/cats.jpg";
 import birds from "./assets/images/birds.jpg";
 export const categories = [
   {
@@ -7,14 +7,15 @@ export const categories = [
     title: "Cats",
     image: cats,
   },
-  {
-    id: "birds",
-    title: "Birds",
-    image: birds,
-  },
+
   {
     id: "dogs",
     title: "Dogs",
     image: dogs,
+  },
+  {
+    id: "birds",
+    title: "Birds",
+    image: birds,
   },
 ];

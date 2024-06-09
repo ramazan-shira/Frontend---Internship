@@ -1,6 +1,7 @@
 .hero-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
@@ -32,7 +33,7 @@
 .animal-title {
   position: absolute;
   cursor: pointer;
-  top: 50%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 66px;
