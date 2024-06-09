@@ -168,7 +168,7 @@ textarea:focus {
   color: #1dab45;
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1600px) {
   .contact-container {
     padding: 50px 300px;
   }
